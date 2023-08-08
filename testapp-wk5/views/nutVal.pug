@@ -1,0 +1,13 @@
+extends layout 
+
+block main-content 
+  header#header 
+      .header-content   
+        h2#site-name 
+          a(href="/recipe") Recipes Page 
+  h1.page-title Hello! Here's a list of nutrition information for #{recipe}
+  ul 
+    each item in nutritionList.nutrients
+      li 
+          #{item.name} #{item.name} #{item.amount} #{item.unit} #{item.percentOfDailyNeeds} 
+  
